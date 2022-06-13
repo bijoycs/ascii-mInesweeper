@@ -63,10 +63,6 @@ public class Board {
         });
     }
 
-    public Map<Integer, Map<Integer, Cell>> getGameBoard() {
-        return gameBoard;
-    }
-
     public int getRows() {
         return rows;
     }

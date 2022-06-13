@@ -38,7 +38,7 @@ public class AsciiMineSweeper {
     }
 
     private static int play(Board board, int totalMines) {
-        // uncomment to see the hidden mines
+        // DEBUG: uncomment to see the hidden mines
         //board.drawMineBoard(totalMines);
 
         Scanner in = new Scanner(System.in);

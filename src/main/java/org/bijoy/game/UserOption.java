@@ -4,22 +4,15 @@ public class UserOption {
 
     private final int rowSelected;
 
-    private final String columnNameSelected;
-
     private final int columnSelected;
 
     public UserOption(final int rowSelected, final String columnNameSelected) {
         this.rowSelected = rowSelected;
-        this.columnNameSelected = columnNameSelected;
         this.columnSelected = getColumnNumber(columnNameSelected);
     }
 
     public int getRowSelected() {
         return rowSelected;
-    }
-
-    public String getColumnNameSelected() {
-        return columnNameSelected;
     }
 
     public int getColumnSelected() {
