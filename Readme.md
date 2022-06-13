@@ -1,6 +1,6 @@
 ### AsciiMineSweeper ### 
 This game is a basic version of minesweeper in ascii form.  
-Default size of the board is 3*3 but this can be changed by changing the constants ROWS and COLUMNS in the file AsciiMineSweeper.java. The number of mines is always between 20-30% of the size of the field. 
+Default size of the board is 10*10 but this can be changed by changing the constants ROWS and COLUMNS in the file AsciiMineSweeper.java. The number of mines is always between 20-30% of the size of the field. 
 
 #### Project ####
 The project can be checked out and imported into Intellij. The formatting is default.

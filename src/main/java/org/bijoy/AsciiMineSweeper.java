@@ -18,9 +18,9 @@ public class AsciiMineSweeper {
 
     private static final int QUIT = 2;
 
-    private static final int ROWS = 3;
+    private static final int ROWS = 10;
 
-    private static final int COLUMNS = 3;
+    private static final int COLUMNS = 10;
 
     public static void main(String[] args) {
         int userOption = PLAY;
@@ -107,7 +107,7 @@ public class AsciiMineSweeper {
     private static UserOption chooseRowAndColumnName(String action) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter the row number of the cell (0 - 9) you want to " + action);
+        System.out.println("Enter the row number of the cell (0 - " + ROWS + ") you want to " + action);
         int row = readValidIntegerInput(in);
 
         System.out.println("Enter the column name of the cell (A - J) you want to " + action);
