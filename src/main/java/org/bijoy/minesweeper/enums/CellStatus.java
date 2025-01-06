@@ -1,8 +1,8 @@
-package org.bijoy.game;
+package org.bijoy.minesweeper.enums;
 
 public enum CellStatus {
-    UNOPENED_WITHOUT_MINE,
-    UNOPENED_WITH_MINE,
+    CLOSED_AND_EMPTY,
+    CLOSED_WITH_MINE,
     OPENED,
     MARKED_MINE_CORRECTLY,
     MARKED_MINE_WRONGLY

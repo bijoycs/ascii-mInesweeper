@@ -1,8 +1,16 @@
-package org.bijoy.game;
+package org.bijoy.minesweeper.model;
+
+import static org.bijoy.minesweeper.enums.CellStatus.CLOSED_AND_EMPTY;
+import static org.bijoy.minesweeper.enums.CellStatus.CLOSED_WITH_MINE;
+import static org.bijoy.minesweeper.enums.CellStatus.MARKED_MINE_CORRECTLY;
+import static org.bijoy.minesweeper.enums.CellStatus.MARKED_MINE_WRONGLY;
+import static org.bijoy.minesweeper.enums.CellStatus.OPENED;
+
+import org.bijoy.minesweeper.enums.CellStatus;
 
 public class Cell {
 
-    private CellStatus cellStatus = CellStatus.UNOPENED_WITHOUT_MINE;
+    private CellStatus cellStatus = CLOSED_AND_EMPTY;
 
     private int neighbouringMines = 0;
 
@@ -19,7 +27,7 @@ public class Cell {
     }
 
     public String getCellContent() {
-        if (cellStatus == CellStatus.OPENED) {
+        if (cellStatus == OPENED) {
             if (this.neighbouringMines == 0) {
                 return "   ";
             }
@@ -27,7 +35,7 @@ public class Cell {
             return " " + this.neighbouringMines + " ";
         }
 
-        if (cellStatus == CellStatus.MARKED_MINE_CORRECTLY || cellStatus == CellStatus.MARKED_MINE_WRONGLY) {
+        if (cellStatus == MARKED_MINE_CORRECTLY || cellStatus == MARKED_MINE_WRONGLY) {
             return " X ";
         }
 
@@ -35,7 +43,7 @@ public class Cell {
     }
 
     public String getCellContentUnmasked() {
-        if (cellStatus == CellStatus.UNOPENED_WITH_MINE) {
+        if (cellStatus == CLOSED_WITH_MINE) {
             return " M ";
         }
 
